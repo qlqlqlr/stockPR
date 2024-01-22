@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <button onclick="saveReq()">재고추가</button>
+<!--    <a href="/stock/save">재고추가(링크)</a>-->
+    <button onclick="listReq()">재고목록</button>
+</body>
+<script>
+    const saveReq = () => {
+        location.href = "/stock/save";
+    }
+    const listReq = () => {
+        location.href = "/stock/";
+    }
+</script>
+</html>

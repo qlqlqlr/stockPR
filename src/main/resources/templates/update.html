@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+<form action="/stock/update" method="post" name="updateForm">
+    <input type="hidden" name="id" th:value="${stockUpdate.id}">
+    대분류: <input type="text" name="category" th:value="${stockUpdate.category}" readonly> <br>
+    제품명: <input type="text" name="productName" th:value="${stockUpdate.productName}"> <br>
+    개수: <input type="text" name="count" th:value="${stockUpdate.count}"> <br>
+    유통기한: <input type="text" name="exp" th:value="${stockUpdate.exp}"> <br>
+
+    <input type="button" value="정보수정" onclick="stockUpdate()">
+</form>
+<script th:inline="javascript">
+    const stockUpdate = () => {
+       document.updateForm.submit();
+
+    }
+</script>
+</body>
